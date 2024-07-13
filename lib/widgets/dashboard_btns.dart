@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopsmart_admin/services/assets_manager.dart';
 import 'package:shopsmart_admin/widgets/subtitle_text.dart';
 
 class DashboardButtonsWidget extends StatelessWidget {
@@ -33,7 +32,10 @@ class DashboardButtonsWidget extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              SubtitleTextWidget(label: text)
+              SubtitleTextWidget(
+                label: text,
+                fontSize: 16,
+              )
             ],
           ),
         ),
