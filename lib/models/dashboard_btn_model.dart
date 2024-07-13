@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopsmart_admin/screens/edit_upload_product_form.dart';
 import 'package:shopsmart_admin/screens/inner_screen.dart/orders/orders_screen.dart';
 import 'package:shopsmart_admin/screens/search_screen.dart';
 import 'package:shopsmart_admin/services/assets_manager.dart';
@@ -14,10 +15,12 @@ class DashboardButtonsModel {
   });
 
   static List<DashboardButtonsModel> dashboardBtnList(context) => [
-    DashboardButtonsModel(
+        DashboardButtonsModel(
           text: "Add a new product",
           imagePath: AssetsManager.cloud,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, EditOrUploadProductScreen.routeName);
+          },
         ),
         DashboardButtonsModel(
           text: "inspect all products",
@@ -33,5 +36,5 @@ class DashboardButtonsModel {
             Navigator.pushNamed(context, OrdersScreenFree.routeName);
           },
         ),
-  ];
+      ];
 }
